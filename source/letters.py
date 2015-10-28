@@ -2,13 +2,15 @@
 class A(object):
     ''' A class will be converting from lower to uppercase. This is just for
     testing how Sphinx works, I am not that silly to do a class like this, man.
+
     '''
 
     def __init__(self, a_string):
         ''' Initialise with a string.
 
-        :param a_string: a string that will be stored as internal attribute.
-        :type a_string: string
+        Args:
+            a_string (str): a string that will be stored as internal attribute.
+
         '''
 
         self.the_string = a_string
@@ -16,10 +18,12 @@ class A(object):
     def _veryPrivateMember(self, swearing_word='silly'):
         ''' Also can list private members like this one.
 
-        :param swearing_word: swearing word to build the sentence with.
-        :type swearing_word: string
-        :return: the sentence with the swearing word.
-        :rtype: ``string``
+        Args:
+            swearing_word (string): swearing word to build the sentence with.
+        
+        Returns:
+            string: the sentence with the swearing word.
+
         '''
 
         string = "Hey {0}, I am doing nothing".format(swearing_word)
@@ -29,8 +33,9 @@ class A(object):
     def execute(self):
         ''' Run the action.
 
-        :return: the uppercase version of the string.
-        :rtype: ``string``
+        Returns:
+            string: the uppercase version of the string.
+
         '''
         
         result = self.the_string.upper()
@@ -38,15 +43,16 @@ class A(object):
 
 class B(object):
     ''' A class will be multiplying a value.
+
     '''
 
     def __init__(self, value, multiplier):
         ''' Initialise with a value and a multiplier.
 
-        :param value: number to multiply.
-        :param multiplier: multiplier for the value.
-        :type value: int
-        :type multiplier: int
+        Args:
+            value (int): number to multiply.
+            multiplier (int): multiplier for the value.
+
         '''
 
         self.value = value
@@ -55,8 +61,9 @@ class B(object):
     def execute(self):
         ''' Run the action.
 
-        :return: result of the multiplication
-        :rtype: `int`
+        Returns:
+            int: result of the multiplication.
+
         '''
 
         result = self.multiplier * self.value
@@ -70,12 +77,11 @@ class C(object):
     def __init__(self, string1, string2, join_character):
         ''' Initialise with a strings
 
-        :param string1: first string.
-        :param string2: second string.
-        :param join_character: character that will join the strings.
-        :type string1: string
-        :type string2: string
-        :type join_character: string
+        Args:
+            string1 (string): first string.
+            string2 (string): second string.
+            joing_character (string): join separator.
+
         '''
 
         self.s1 = string1
@@ -85,8 +91,9 @@ class C(object):
     def execute(self):
         ''' Run the action.
 
-        :return: concatenation.
-        :rtype: ``string``
+        Returns:
+            string: concatenation.
+            
         '''
 
         result = self.s1 + self.sep + self.s2
