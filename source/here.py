@@ -1,6 +1,6 @@
-from A import A
-from B import B
-from C import C
+from letters import A
+from letters import B
+from letters import C
 
 def do_something_crazy(s1, s2, s3, val, multiplier):
     ''' Runs a crazy test with classes.
